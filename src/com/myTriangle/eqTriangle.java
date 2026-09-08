@@ -1,7 +1,9 @@
 package com.myTriangle;
 
+//This program uses methods and loops to print and equilateral triangle
 public class eqTriangle {
     public static void main(String[] args) {
+        //this is the triangle method
         triangle();
 
     }
