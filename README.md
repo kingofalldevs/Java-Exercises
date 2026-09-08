@@ -5,4 +5,4 @@ A sandbox repository to track my progress as I learn Java and object-oriented pr
 ## 🚀 Projects Included
 
 * **Equilateral Triangle:** A console-based application generating star patterns using complex loops.
-Still building!
+* **Concepts:** (multi-variable loop tracking ), (repetition mechanics), (console output alignment), 
