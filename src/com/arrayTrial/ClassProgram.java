@@ -15,10 +15,8 @@ public class ClassProgram {
 
         int[] scores = new int[classSize];
         String[] students = new String[classSize];
-
         acceptInput( students, classSize, input,scores);
         disOutput(students,scores,classSize);
-
 
     }
 
@@ -30,20 +28,20 @@ public class ClassProgram {
             System.out.print("Enter the score of student " + (i + 1) + " :");
             scores[i] = input.nextInt();
             input.nextLine();
-
         }
 
-
     }
-
+    // method to print out the output
     public static void disOutput(String[] students, int[] scores, int classSize) {
         System.out.println("\t\t\t Class Report");
         System.out.println("--------------------------------");
-        System.out.println("\t\tName\t\tScore");
+        System.out.println("\t\tName\t\t\tScore");
         System.out.println("--------------------------------");
         for (int i = 0;i< classSize;i ++){
-            System.out.println("\t\t"+students[i]+"\t\t"+scores[i]);
+            System.out.println("\t\t"+students[i]+"  \t\t\t"+scores[i]);
         }
-
+        System.out.println("_________________________________");
     }
+
+
 }
