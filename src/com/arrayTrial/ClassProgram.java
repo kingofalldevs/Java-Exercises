@@ -2,6 +2,7 @@ package com.arrayTrial;
 
 import java.util.Scanner;
 
+
 public class ClassProgram {
     //we want this program to accept the names of students in a class
     // accept their scores input output them and then again find the
@@ -13,10 +14,15 @@ public class ClassProgram {
         int classSize = input.nextInt();
         input.nextLine();
 
+
         int[] scores = new int[classSize];
         String[] students = new String[classSize];
         acceptInput( students, classSize, input,scores);
         disOutput(students,scores,classSize);
+        int max = checkMax(scores, classSize);
+        System.out.print("The maximum score is "+ max);
+
+
 
     }
 
@@ -41,6 +47,19 @@ public class ClassProgram {
             System.out.println("\t\t"+students[i]+"  \t\t\t"+scores[i]);
         }
         System.out.println("_________________________________");
+    }
+
+    //checking for the max using loop and if
+    public static int checkMax(int[] scores, int classSize) {
+        int max = scores[0];
+
+        for (int i = 1; i < classSize; i++){
+            if (scores[i] > max){
+                max = scores[i];
+
+            }
+        }
+        return  max;
     }
 
 
