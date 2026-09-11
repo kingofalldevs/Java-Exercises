@@ -20,7 +20,9 @@ public class ClassProgram {
         acceptInput( students, classSize, input,scores);
         disOutput(students,scores,classSize);
         int max = checkMax(scores, classSize);
-        System.out.print("The maximum score is "+ max);
+        int min = checkMin(scores,classSize);
+        System.out.println("The maximum score is "+ max);
+        System.out.println("The minimum score is "+ min);
 
 
 
@@ -30,7 +32,6 @@ public class ClassProgram {
         for (int i = 0; i < classSize; i++) {
             System.out.print("Enter the name of student " + (i + 1) + " :");
             students[i] = input.nextLine();
-
             System.out.print("Enter the score of student " + (i + 1) + " :");
             scores[i] = input.nextInt();
             input.nextLine();
@@ -41,10 +42,10 @@ public class ClassProgram {
     public static void disOutput(String[] students, int[] scores, int classSize) {
         System.out.println("\t\t\t Class Report");
         System.out.println("--------------------------------");
-        System.out.println("\t\tName\t\t\tScore");
+        System.out.printf("\t%-15s%-10s%n", "Name", "Score");
         System.out.println("--------------------------------");
         for (int i = 0;i< classSize;i ++){
-            System.out.println("\t\t"+students[i]+"  \t\t\t"+scores[i]);
+            System.out.printf("\t%-15s%-10d%n", students[i], scores[i]);
         }
         System.out.println("_________________________________");
     }
@@ -52,14 +53,22 @@ public class ClassProgram {
     //checking for the max using loop and if
     public static int checkMax(int[] scores, int classSize) {
         int max = scores[0];
-
         for (int i = 1; i < classSize; i++){
             if (scores[i] > max){
                 max = scores[i];
-
             }
         }
         return  max;
+    }
+
+    public static int checkMin(int[] scores, int classSize) {
+        int min = scores[0];
+        for (int i = 1; i < classSize; i++){
+            if (scores[i] < min){
+                min = scores[i];
+            }
+        }
+        return  min;
     }
 
 
