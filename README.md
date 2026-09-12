@@ -29,4 +29,5 @@ A sandbox repository to track my progress as I learn Java and object-oriented pr
 
 * **Equilateral Triangle:** A console-based application generating star patterns using complex loops.
 * **Concepts:** (multi-variable loop tracking ), (repetition mechanics), (console output alignment),(nested loops for shape generation).
-* 
+* **Class Assessment:** A console-based application that finds the minimum and maximum of  scores of students in a variable class.
+* **Concepts:** (methods for reusable logic), (arrays for storing names and scores), (loops for iteration), (conditionals for comparison), (return values vs void methods), (formatted output for column alignment).
