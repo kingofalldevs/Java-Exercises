@@ -5,17 +5,16 @@ package com.classesTutorial;
 //for example apple 1 is 50 in quantity, apple 2 is 70; apple 3 is 40; we will need to create 6 different arrays
 public class classesTutorial {
     public static void main(String[] args) {
-        Item apple = new Item();
-        apple.name = "apple 1";
-        System.out.print(apple.name);
-        apple.quantity = 50;
-        System.out.print(apple.quantity);
+        Pokemon p1 = new Pokemon();
+        p1.name = "Pikachu";
+        p1.level = 10;
+
+        Pokemon p2 = new Pokemon();
+        p2.name = "Eve";
+        p2.level = 20;
+
+       // System.out.print(p1.name +" "+p1.level);
+        p2.attack();
     }
-
-}
-
-class Item{
-        String name;
-        int quantity;
 }
 
