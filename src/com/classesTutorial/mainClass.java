@@ -7,13 +7,8 @@ public class mainClass {
 
         car car = new car();
 
-        System.out.println(car.isRunning);
-        car.start();
-        System.out.println(car.isRunning);
-        car.stop();
-        System.out.println(car.isRunning);
-
-
+       car.drive();
+       car.brake();
 
 
 

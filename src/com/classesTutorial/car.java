@@ -19,7 +19,7 @@ public class car {
         System.out.println("You drive the "+ model);
     }
     void brake(){
-        System.out.println("You break the "+ model);
+        System.out.println("You brake the "+ model);
     }
 
 
