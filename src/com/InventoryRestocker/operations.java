@@ -26,7 +26,6 @@ public class operations {
         }
 
     }
-    void
     void removeItem(){
         listItems();
         System.out.print("Enter the No of item you wanna remove ");
