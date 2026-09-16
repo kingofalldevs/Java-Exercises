@@ -35,19 +35,35 @@ public class Playlist {
             System.out.print((i+1)+ " ");
            trackList.get(i).displaySong();
         }
+
+        totalSongs();
+    }
+    void totalSongs(){
+        System.out.println(trackList.size());
     }
     void removeSong(){
         if (trackList.isEmpty()){
             System.out.println("Playlist is empty nothing to remove here lol");
         }else {
             displayList();
-            System.out.println("Enter the No song to be removed: ");
+            System.out.println("Enter the song No to be removed(must be between 1 and "+trackList.size()+ "):");
             int userChoice = input.nextInt();
-            if (userChoice > trackList.size()){
+            int targetIndex = userChoice - 1;
+            if (userChoice < 0 || userChoice >= trackList.size()){
                 System.out.println("Song cannot be found.Please pick a correct song No");
+            }else {
+                String targetTitle = trackList.get(targetIndex).title;
+                System.out.println("You are about to remove" + targetTitle);
+                System.out.println("1.Remove \n2.Cancel");
+                int decision = input.nextInt();
+                input.nextLine();
+                if (decision == 1) {
+                    trackList.remove(targetIndex);
+                    System.out.println("You have removed" + targetTitle);
+                } else {
+                    System.out.println("Song removal has been cancelled");
+                }
             }
-            System.out.println("You are about to remove"+ trackList.get(userChoice));
-            System.out.println("1.Remove \n2.Cancel");
         }
 
     }
