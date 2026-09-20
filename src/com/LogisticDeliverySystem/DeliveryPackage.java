@@ -22,6 +22,10 @@ public class DeliveryPackage {
     public void setDestination(String destination) {this.destination = destination;}
     public void setWeight(double weight) { this.weight = weight;}
     public void setStatus(String status) {this.status = status;}
+    //calculateShippingCost method
+    public double calculateShippingCost(){
+        return weight * 20;
+    }
 }
 //Attributes to create: trackingId (String), destination (String), weight (double), and status (String).
 // Rules: Make all fields completely private. Provide a constructor to initialize them and create the appropriate public getters and setters.
