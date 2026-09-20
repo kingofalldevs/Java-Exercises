@@ -6,12 +6,12 @@ public class DeliveryPackage {
     private double weight;
     private String status;
     //constructor
-    DeliveryPackage(String trackingId,String destination, double weight, String status){
-        this.trackingId = trackingId;
-        this.destination = destination;
-        this.weight = weight;
-        this.status = status;
-    }
+    //public DeliveryPackage(String trackingId,String destination, double weight, String status){
+     //   this.trackingId = trackingId;
+     //   this.destination = destination;
+      //  this.weight = weight;
+    //    this.status = status;
+   // }
     //setters
     public String getTrackingId() { return trackingId;}
     public String getDestination() {return destination;}
