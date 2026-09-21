@@ -8,9 +8,7 @@ public class ExpressPackage extends DeliveryPackage{
         this.isOvernight= isOvernight;
     }
 
-    if(isOvernight == true;){
 
-    }
 
 
 }
