@@ -3,6 +3,7 @@ package superKeyword;
 public class Gun {
     String brand;
     double caliber;
+    int range = 50;
 
     public Gun(){}
     //constructor
@@ -15,5 +16,6 @@ public class Gun {
     void shoot(){
         System.out.println("Click....Boom!");
     }
+
 
 }
