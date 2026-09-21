@@ -1,5 +1,7 @@
 package com.Polymorphism;
 
+
+
 public class Main {
     public static void main(String[] args) {
        // Polymorphism = the Greek word for poly "many" and morph "forms"
@@ -11,6 +13,11 @@ public class Main {
 
 
         Vehicle[] racers  = {car,bicycle,boat};
+
+        for (Vehicle x : racers){
+            x.go();
+
+        }
 
 
 
