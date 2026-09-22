@@ -5,7 +5,7 @@ public class PackageDelivery implements Deliverable{
     private double Rate;
     private double baseFee;
 
-    public PackageDelivery(double Rate, double baseFee){
+    public PackageDelivery(){
         this.Rate = 0.19;
         this.baseFee = 50;
     }
