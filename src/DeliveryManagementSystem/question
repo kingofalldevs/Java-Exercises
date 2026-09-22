@@ -1,0 +1,248 @@
+🚚 Project: Delivery Management System
+
+Build a console-based Java application that manages different types of deliveries.
+
+Scenario
+
+A logistics company has different types of vehicles:
+
+Cars
+Trucks
+Motorcycles
+
+Customers can create delivery orders, and the system calculates the delivery cost depending on the type of delivery.
+
+1. Create an abstract Vehicle class
+
+It should contain common information such as:
+
+vehicleId
+brand
+capacity
+
+And an abstract method:
+
+public abstract void move();
+
+You can also have a normal method:
+
+public void displayInfo()
+2. Create three subclasses
+
+Create:
+
+Car
+Truck
+Motorcycle
+
+All should extend Vehicle.
+
+Each one should override:
+
+move()
+
+For example, conceptually:
+
+Car → "Car is moving"
+Truck → "Truck is transporting goods"
+Motorcycle → "Motorcycle is delivering"
+
+This gives you inheritance + polymorphism + method overriding.
+
+3. Create a Deliverable interface
+
+Since this is the concept you're currently learning, make this a major part of the project.
+
+public interface Deliverable {
+
+    void deliver();
+
+    double calculateShippingCost(double distance);
+
+}
+
+Notice:
+
+No method bodies.
+
+Your delivery classes must implement them.
+
+4. Create different delivery types
+
+For example:
+
+FoodDelivery
+PackageDelivery
+DocumentDelivery
+
+Each should implement:
+
+Deliverable
+
+But each calculates its shipping cost differently.
+
+For example, you might decide:
+
+Food:
+base cost + distance × rate
+
+Package:
+base cost + distance × rate + weight charge
+
+Document:
+base cost + distance × rate
+
+You decide the actual numbers.
+
+That's part of the exercise.
+
+5. Use encapsulation
+
+Don't do this:
+
+public double price;
+
+Instead:
+
+private double price;
+
+Then provide appropriate getters/setters.
+
+You've already been working with encapsulation, so this project should make you use it rather than just understand the definition.
+
+6. Create a Customer class
+
+Give customers things like:
+
+customerId
+name
+phone
+address
+
+Keep the fields private.
+
+7. Create a DeliveryOrder class
+
+An order could contain:
+
+orderId
+customer
+delivery
+vehicle
+distance
+
+For example:
+
+Order #1001
+Customer: Prince
+Delivery: Package
+Vehicle: Truck
+Distance: 25km
+8. Use a HashMap
+
+You've already reached HashMaps in your exercises.
+
+Use one to store your orders:
+
+HashMap<Integer, DeliveryOrder> orders;
+
+The order ID should be the key.
+
+You should be able to:
+
+Add order
+Find order by ID
+Remove order
+Display all orders
+9. Use an array of vehicles
+
+You've already practiced putting different subclasses into a parent-type array.
+
+Do it again here:
+
+Vehicle[] vehicles = {
+    new Car(...),
+    new Truck(...),
+    new Motorcycle(...)
+};
+
+Then use an enhanced for loop:
+
+for (Vehicle vehicle : vehicles) {
+    vehicle.move();
+}
+
+The important part is that you're calling the same method on different objects and getting different behavior.
+
+That's polymorphism in practice.
+
+10. Main menu
+
+Your Main class should have a simple console menu:
+
+===== DELIVERY MANAGEMENT SYSTEM =====
+
+1. Add Customer
+2. Add Delivery Order
+3. View Order
+4. View All Orders
+5. Calculate Shipping Cost
+6. Deliver Order
+7. Remove Order
+8. Exit
+
+Choose an option:
+
+You can use Scanner.
+
+Your constraints 🔥
+
+I wouldn't use Spring Boot for this one.
+
+Pure Java.
+
+And don't use anything you haven't learned yet just because you can Google it.
+
+Try to solve it with the tools you've accumulated so far:
+
+Classes
+    ↓
+Encapsulation
+    ↓
+Inheritance
+    ↓
+Abstract classes
+    ↓
+Interfaces
+    ↓
+Polymorphism
+    ↓
+Arrays
+    ↓
+HashMaps
+    ↓
+Methods
+    ↓
+Loops
+    ↓
+Scanner
+
+This project is basically a checkpoint for everything you've learned so far.
+
+Suggested package structure
+com.delivery
+│
+├── Main.java
+│
+├── Vehicle.java
+├── Car.java
+├── Truck.java
+├── Motorcycle.java
+│
+├── Deliverable.java
+├── FoodDelivery.java
+├── PackageDelivery.java
+├── DocumentDelivery.java
+│
+├── Customer.java
+└── DeliveryOrder.java
