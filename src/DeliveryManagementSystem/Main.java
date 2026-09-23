@@ -19,7 +19,7 @@ public class Main {
                 System.out.println("Register a customer");
             }else if(userInput == 2){
                 System.out.println("Find order \n Enter Order ID: ");
-                operations.findOrder;
+
             }else if (userInput == 3){
                 System.out.println("Place Order");
             }else if(userInput == 4){
