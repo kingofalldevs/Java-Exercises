@@ -14,6 +14,7 @@ public class DeliveryOrder {
         this.vehicle = vehicle;
         this.distance = distance;
     }
+    public DeliveryOrder(){}
 
     public String getOrderId() {return orderId;}
 
