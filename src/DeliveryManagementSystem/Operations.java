@@ -7,7 +7,9 @@ public class Operations {
     MotorCycle motorCycle = new MotorCycle();
     MotorCycle secondMotorCycle = new MotorCycle();
     Car car = new Car();
+    Car secondCar = new Car();
     Truck truck = new Truck();
+    Truck secondTruck = new Truck();
     //Delivery Types
     FoodDelivery foodDelivery = new FoodDelivery();
     PackageDelivery packageDelivery = new PackageDelivery();
@@ -18,11 +20,6 @@ public class Operations {
     ArrayList<Truck> trucks = new ArrayList<>();
 
     //pass in vehicle objects
-    public void passInVehicles(){
-        motorCycles.add(motorCycle);
-        cars.add(car);
-        trucks.add(truck);
-    }
     //add vehicles
     public void addVehicles(){
         //motorCycle 1
@@ -41,27 +38,32 @@ public class Operations {
         car.setVehicleId("QW-2335");
         cars.addFirst(car);
         //car 2
-        car.setBrand("Nissan");
-        car.setCapacity(648.21);
-        car.setVehicleId("II-78165");
-        cars.add(car);
+        secondCar.setBrand("Nissan");
+        secondCar.setCapacity(648.21);
+        secondCar.setVehicleId("II-78165");
+        cars.add(secondCar);
+
         //Truck 1
         truck.setBrand("Toyota");
         truck.setCapacity(770.43);
         truck.setVehicleId("YU-57438");
         trucks.addFirst(truck);
         //Truck 2
-        truck.setBrand("Man");
-        truck.setCapacity(770.43);
-        truck.setVehicleId("KU-5738");
-        trucks.add(truck);
+        secondTruck.setBrand("Man");
+        secondTruck.setCapacity(770.43);
+        secondTruck.setVehicleId("KU-5738");
+        trucks.add(secondTruck);
     }
 
-    Vehicle[] vehicle = {car, truck, motorCycle};
 
-    public void listMotorCycles(){
-        for (MotorCycle cycle : motorCycles) {
-            System.out.println(cycle.getBrand() + " " + cycle.getVehicleId() + " " + cycle.getCapacity());
-        }
+    public void listVehicles(){
+        ArrayList<Vehicle> vehicle = new ArrayList<>();
+        vehicle.addAll(motorCycles);
+        vehicle.addAll(cars);
+        vehicle.addAll(trucks);
+
+       for (Vehicle x : vehicle){
+           System.out.println(x.getBrand()+" "+x.getVehicleId()+ " " +x.getCapacity());
+       }
     }
 }

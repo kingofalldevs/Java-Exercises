@@ -7,6 +7,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         DeliveryOrder deliveryOrder = new DeliveryOrder();
         Operations operations = new Operations();
+        operations.addVehicles();
 
 //        boolean userSession = true;
 //        do {
@@ -25,12 +26,10 @@ public class Main {
 //                System.out.println("Place Order");
 //            }else if(userInput == 4){
 //                System.out.println("Display all Vehicles");
-//                operations.findVehicle();
 //            }
 //        }while(userSession);
 
-        operations.addVehicles();
-        operations.listMotorCycles();
+        operations.listVehicles();
     }
 
 
