@@ -25,7 +25,7 @@ A sandbox repository to track my progress as I learn Java and object-oriented pr
 * **Constructors:** Initializing new objects with their starting data.
 
 
-## 🚀 Projects Included
+### 🚀 Projects Included
 
 * **Equilateral Triangle:** A console-based application generating star patterns using complex loops.
 * **Concepts:** (multi-variable loop tracking ), (repetition mechanics), (console output alignment),(nested loops for shape generation).
