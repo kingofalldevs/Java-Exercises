@@ -8,11 +8,11 @@ public class whileLoop {
         boolean activeSession = true;
         while (activeSession){
             System.out.println("Are you still Shopping?: ");
-            String Useranswer = input.nextLine();
+            String UserAnswer = input.nextLine();
 
-            if (Useranswer.equalsIgnoreCase("Yes")){
+            if (UserAnswer.equalsIgnoreCase("Yes")){
                 System.out.println("Keep Shopping!");
-            }else if (Useranswer.equalsIgnoreCase("No")){
+            }else if (UserAnswer.equalsIgnoreCase("No")){
                 System.out.println("Exiting Application....");
                 activeSession = false;
             }else {
