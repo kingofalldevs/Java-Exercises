@@ -2,8 +2,11 @@ package DeliveryManagementSystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Operations {
+    Scanner input = new Scanner(System.in);
+
     //vehicles
     MotorCycle motorCycle = new MotorCycle();
     MotorCycle secondMotorCycle = new MotorCycle();
@@ -59,9 +62,34 @@ public class Operations {
         trucks.add(secondTruck);
     }
 
-    public void registerCustomer(){
+    public void registerCustomers(){
+        System.out.println("How many customers do you want to register: ");
+        int No = input.nextInt();
+
+        for(int j = 1; j <= No; j++){
+          registerBlueprint();
+        }
+    }
+
+    public void registerBlueprint(){
         Customer customer = new Customer();
         System.out.println("Enter customer No: ");
+        int id = input.nextInt();
+        input.nextLine();
+
+        if(customers.containsKey(id)){
+            System.out.println("The Id already exists");
+            return;
+        }
+        System.out.println("Enter Name: ");
+        customer.setName(input.nextLine());
+        System.out.println("Enter Email: ");
+        customer.setAddress(input.nextLine());
+        System.out.println("Enter Phone");
+        customer.setPhone(input.nextLine());
+        String customerId = String.format("QWERM%04d", id);
+        customer.setCustomerId(customerId);
+        customers.put(id,customer);
 
 
     }
