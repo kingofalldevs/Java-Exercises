@@ -20,7 +20,14 @@ public class Main {
                       userSession = false;
                       System.out.println("Exiting Application ....");
                   } else if (userInput == 1) {
-                      System.out.println("1.Register a customer\n2.List Customer 3.Remove Customer");
+                      System.out.println("1.Register a customer\n2.List Customer \n3.Remove Customer \n4.Search Customer: ");
+                       userInput = input.nextInt();
+                      if (userInput == 1){
+                          operations.registerCustomers();
+                      }else if(userInput == 2){
+                          operations.displayCustomers();
+                      }
+
                   } else if (userInput == 2) {
                       System.out.println("Find order \n Enter Order ID: ");
 

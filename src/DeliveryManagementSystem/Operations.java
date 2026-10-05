@@ -94,6 +94,14 @@ public class Operations {
 
     }
 
+    public void displayCustomers(){
+        System.out.println("CUSTOMER ID"+"\tEMAIL"+"\tNAME");
+        System.out.println("_______________________________");
+       for (Customer key : customers.values()){
+           System.out.println(key.getCustomerId() +"\t"+ key.getAddress()+"\t"+key.getName());
+       }
+    }
+
 
     public void listVehicles(){
         ArrayList<Vehicle> vehicle = new ArrayList<>();
