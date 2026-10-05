@@ -1,6 +1,7 @@
 package DeliveryManagementSystem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Operations {
     //vehicles
@@ -18,6 +19,9 @@ public class Operations {
     ArrayList<MotorCycle> motorCycles = new ArrayList<>();
     ArrayList<Car> cars = new ArrayList<>();
     ArrayList<Truck> trucks = new ArrayList<>();
+
+    //Hashmap for  customers
+    HashMap<Integer, Customer> customers = new HashMap<>();
 
     //pass in vehicle objects
     //add vehicles
@@ -53,6 +57,13 @@ public class Operations {
         secondTruck.setCapacity(770.43);
         secondTruck.setVehicleId("KU-5738");
         trucks.add(secondTruck);
+    }
+
+    public void registerCustomer(){
+        Customer customer = new Customer();
+        System.out.println("Enter customer No: ");
+
+
     }
 
 

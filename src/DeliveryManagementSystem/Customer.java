@@ -6,12 +6,15 @@ public class Customer {
     private String phone;
     private String address;
 
+
+
     Customer(String customerId,String name,String phone,String address){
         this.customerId = customerId;
         this.name = name;
         this.phone = phone;
         this.address = address;
     }
+    public Customer(){}
 
     public String getCustomerId() {return customerId;}
 
